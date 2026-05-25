@@ -2,10 +2,13 @@
 Автоматический оффлайн перевод манги с японского на русский
 
 Тут можно скачать файлы моделей. 
+
 https://mega.nz/folder/nBlA1CBR#lFqzp3AGYv5vqIEeXu7Ccw
 
-https://github.com/Guljaca/RPG-AI-Assistant/wiki/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0
 Тут настройка LM_server
+
+https://github.com/Guljaca/RPG-AI-Assistant/wiki/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0
+
 
 ПРОИЗВОДИТЕЛЬНОСТЬ:
 RTX3060 12VRAM 32RAM
