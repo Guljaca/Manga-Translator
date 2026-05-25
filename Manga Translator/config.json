@@ -1,0 +1,32 @@
+{
+  "LM_STUDIO_URL": "http://localhost:1234/v1",
+  "MODEL_NAME": "translategemma-12b-it",
+  "CONTEXT_SIZE": 3,
+  "TEMPERATURE": 0.25,
+  "TIMEOUT": 26,
+  "CONFIDENCE_THRESHOLD": 0.45,
+  "AUTO_CHECK_INTERVAL": 2.0,
+  "SOURCE_LANG": "Japanese",
+  "TARGET_LANG": "Russian",
+  "MODE": "manga",
+  "MANGA_OCR_BACKEND": "manga_ocr",
+  "TEXT_OCR_BACKEND": "easyocr",
+  "OCR_LANG": "ja",
+  "EASYOCR_CONFIDENCE": 0.1,
+  "TEXT_BOX_WIDTH_FACTOR": 1.2,
+  "TEXT_BOX_HEIGHT_FACTOR": 1.2,
+  "ENABLE_OVERLAP_RELOCATION": true,
+  "FONT_FAMILY": "Arial",
+  "FONT_SIZE": 12,
+  "OCR_ENGINES": [
+    "easyocr"
+  ],
+  "OCR_STRATEGY": "best_confidence",
+  "TESSERACT_CONFIDENCE": 0.15,
+  "WINDOWS_OCR_CONFIDENCE": 0.2,
+  "TESSERACT_PATH": "D:/Programs_translation/TesseractOCR550/tesseract.exe",
+  "USE_GPU_OCR": true,
+  "USE_GPU_MODEL": true,
+  "ASYMMETRIC_TRANSLATION": true,
+  "MAX_CONCURRENT_REQUESTS": 2
+}

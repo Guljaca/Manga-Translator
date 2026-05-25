@@ -1,0 +1,298 @@
+2026-05-02 17:01:24,258 [INFO] === Manga Translator запущен ===
+2026-05-02 17:01:24,259 [INFO] Запуск главного окна Tkinter
+2026-05-02 17:01:24,891 [DEBUG] Запрос списка моделей: http://localhost:1234/v1
+2026-05-02 17:01:24,892 [DEBUG] URL для /models: http://localhost:1234/v1/models
+2026-05-02 17:01:24,896 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:01:26,954 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:01:26,955 [DEBUG] Ответ /models: статус 200
+2026-05-02 17:01:26,955 [INFO] Найдены модели: ['gemma-4-26b-a4b-it-ultra-uncensored-heretic', 'qwen/qwen3.6-35b-a3b', 'text-embedding-nomic-embed-text-v1.5']
+2026-05-02 17:01:26,958 [INFO] Выбрана модель: gemma-4-26b-a4b-it-ultra-uncensored-heretic
+2026-05-02 17:01:30,529 [INFO] Начинаем перевод. Модель: gemma-4-26b-a4b-it-ultra-uncensored-heretic, язык: Russian
+2026-05-02 17:01:32,394 [DEBUG] Выделена область: (409, 484, 1199, 780)
+2026-05-02 17:01:32,405 [DEBUG] Область выделена: (409, 484, 1199, 780)
+2026-05-02 17:01:32,536 [DEBUG] Скриншот сделан, размер: 790x296
+2026-05-02 17:01:32,537 [INFO] Отправка в LM Studio: URL=http://localhost:1234/v1/chat/completions, модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic, размер=790x296
+2026-05-02 17:01:32,537 [ERROR] Необработанное исключение: '"bbox"'
+Traceback (most recent call last):
+  File "d:\Project Py3 AI Manga Translator\Manga_Translator.py", line 417, in start_translation
+    translations = send_chat_completion(base_url, selected_model, img_b64, w, h, self.config)
+  File "d:\Project Py3 AI Manga Translator\Manga_Translator.py", line 109, in send_chat_completion
+    prompt = config["prompt_template"].format(
+        target_language=config["target_language"],
+        width=width,
+        height=height
+    )
+KeyError: '"bbox"'
+2026-05-02 17:03:57,210 [INFO] === Manga Translator запущен ===
+2026-05-02 17:03:57,211 [INFO] Запуск главного окна Tkinter
+2026-05-02 17:03:57,319 [WARNING] Обнаружен потенциально сломанный prompt_template, заменяем на дефолтный
+2026-05-02 17:03:57,856 [DEBUG] Запрос списка моделей: http://localhost:1234/v1
+2026-05-02 17:03:57,857 [DEBUG] URL для /models: http://localhost:1234/v1/models
+2026-05-02 17:03:57,860 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:03:59,922 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:03:59,923 [DEBUG] Ответ /models: статус 200
+2026-05-02 17:03:59,923 [INFO] Найдены модели: ['gemma-4-26b-a4b-it-ultra-uncensored-heretic', 'qwen/qwen3.6-35b-a3b', 'text-embedding-nomic-embed-text-v1.5']
+2026-05-02 17:03:59,934 [INFO] Выбрана модель: gemma-4-26b-a4b-it-ultra-uncensored-heretic
+2026-05-02 17:04:17,254 [INFO] Начинаем перевод. Модель: gemma-4-26b-a4b-it-ultra-uncensored-heretic, язык: Russian
+2026-05-02 17:04:19,947 [DEBUG] Выделена область: (108, 1181, 816, 1300)
+2026-05-02 17:04:19,957 [DEBUG] Область выделена: (108, 1181, 816, 1300)
+2026-05-02 17:04:20,089 [DEBUG] Скриншот сделан, размер: 708x119
+2026-05-02 17:04:20,090 [INFO] Отправка в LM Studio: URL=http://localhost:1234/v1/chat/completions, модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic, размер=708x119
+2026-05-02 17:04:20,090 [DEBUG] Промпт: You are a manga translator. The image is a manga page. Detect every text bubble or text box. For each, return a JSON object with:
+- 'bbox': [x1, y1, x2, y2] (absolute pixel coordinates, integers)
+- 't...
+2026-05-02 17:04:20,090 [DEBUG] Отправляем POST запрос, ждём ответа (таймаут 60 сек)...
+2026-05-02 17:04:20,091 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:04:40,618 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 1365
+2026-05-02 17:04:40,618 [DEBUG] Получен ответ HTTP 200
+2026-05-02 17:04:40,618 [DEBUG] Сырой ответ модели: ```json
+[
+  {
+    "bbox": [12, 56, 248, 134],
+    "translated_text": "@TheDRZJ • 3 дня назад"
+  },
+  {
+    "bbox": [12, 270, 945, 955],
+    "translated_text": "Судьба ДЛИННЫХ ОБЗОРОВ все еще на 100% от вас и это не дебильный пафос - это всего лишь алгоритмы Ютуба и тот факт, что пожилые деды пытаются сегментировать интернет. Так что если реально понравится видео - оторвитесь на полсекунды от своих царских дел ради царского лайка!\nОбнял."
+  }
+]
+```...
+2026-05-02 17:04:40,619 [INFO] Успешно распарсено 2 блоков перевода
+2026-05-02 17:04:40,619 [INFO] Показываем оверлей с 2 блоками
+2026-05-02 17:04:52,815 [INFO] Перевод завершён успешно
+2026-05-02 17:06:31,453 [INFO] === Manga Translator запущен ===
+2026-05-02 17:06:31,551 [WARNING] Замена сломанного prompt_template на дефолтный
+2026-05-02 17:08:17,183 [INFO] === Manga Translator запущен ===
+2026-05-02 17:08:17,281 [WARNING] Замена сломанного prompt_template на дефолтный
+2026-05-02 17:08:17,810 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:08:19,848 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:08:26,364 [DEBUG] Выделено: (409, 774, 1120, 956)
+2026-05-02 17:08:26,377 [DEBUG] Область: (409, 774, 1120, 956)
+2026-05-02 17:08:26,549 [INFO] POST http://localhost:1234/v1/chat/completions модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic размер=711x182
+2026-05-02 17:08:26,550 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:08:46,778 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 1354
+2026-05-02 17:11:33,348 [INFO] === Manga Translator запущен ===
+2026-05-02 17:11:33,445 [WARNING] Замена сломанного prompt_template на дефолтный
+2026-05-02 17:11:33,980 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:11:36,010 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:11:40,584 [DEBUG] Выделено: (410, 994, 1180, 1142)
+2026-05-02 17:11:40,593 [DEBUG] Область: (410, 994, 1180, 1142)
+2026-05-02 17:11:40,756 [INFO] POST http://localhost:1234/v1/chat/completions модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic размер=770x148
+2026-05-02 17:11:40,757 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:11:58,047 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 1350
+2026-05-02 17:11:58,048 [INFO] ===== СЫРОЙ ОТВЕТ МОДЕЛИ =====
+```json
+[
+  {
+    "bbox": [13, 25, 963, 125],
+    "translated_text": "Скорее всего, модель gemma-4-26b... не является Vision-моделью и не понимает, что делать с картинкой, поэтому возвращает какой-то текст. Тебе нужно выбрать в LM Studio модель, которая поддерживает мультимодальность (например, llava-v1.5-7b, qwen-vl-chat, bakllava-1).\n\nЕсли модель верная, но ответ не парсится — ты увидишь его в логе, и сможешь исправить промпт."
+  }
+]
+```
+===== КОНЕЦ ОТВЕТА =====
+2026-05-02 17:11:58,048 [INFO] Успешно распарсено JSON, блоков: 1
+2026-05-02 17:16:18,126 [INFO] === Manga Translator запущен ===
+2026-05-02 17:16:18,779 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:16:20,810 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:16:36,522 [INFO] === Manga Translator запущен ===
+2026-05-02 17:16:37,152 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:16:39,217 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:16:51,836 [DEBUG] Область: (407, 832, 1161, 899)
+2026-05-02 17:16:51,965 [INFO] POST http://localhost:1234/v1/chat/completions модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic размер=754x67
+2026-05-02 17:16:51,967 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:17:03,681 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 1064
+2026-05-02 17:17:03,681 [INFO] ===== СЫРОЙ ОТВЕТ =====
+```json
+[
+  {
+    "bbox": [11, 32, 988, 130],
+    "translated_text": "1. Обрезка bbox – координаты пересчитываются и обрезаются по границам выделенной области.\nДаже если модель вернула абсолютные координаты (как у тебя), текст теперь покажется."
+  }
+]
+```
+===== КОНЕЦ =====
+2026-05-02 17:17:03,683 [WARNING] Блок вне области: [11, 32, 988, 130] -> (0,0,581,0)
+2026-05-02 17:19:13,276 [INFO] === Manga Translator запущен ===
+2026-05-02 17:19:13,908 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:19:15,960 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:19:30,484 [DEBUG] Область: (408, 953, 782, 990)
+2026-05-02 17:19:30,628 [INFO] POST http://localhost:1234/v1/chat/completions модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic размер=374x37
+2026-05-02 17:19:30,629 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:19:43,700 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 799
+2026-05-02 17:19:43,700 [INFO] ===== СЫРОЙ ОТВЕТ =====
+```json
+[
+  {"bbox": [45, 726, 938, 938], "translated_text": "Размер шрифта по умолчанию: 9 (был 12)."}
+]
+```
+===== КОНЕЦ =====
+2026-05-02 17:19:43,701 [WARNING] Блок вне области: [45, 726, 938, 938] -> (0,0,374,0)
+2026-05-02 17:19:55,331 [DEBUG] Область: (181, 880, 1116, 1376)
+2026-05-02 17:19:55,464 [INFO] POST http://localhost:1234/v1/chat/completions модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic размер=935x496
+2026-05-02 17:19:55,470 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:20:23,479 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 1411
+2026-05-02 17:20:23,479 [INFO] ===== СЫРОЙ ОТВЕТ =====
+```json
+[
+  {"bbox": [572, 571, 710, 653], "translated_text": "Это был свет из здания?"},
+  {"bbox": [843, 843, 963, 903], "translated_text": "Со стороны глубины..."},
+  {"bbox": [712, 356, 915, 455], "translated_text": "И всё же, это всё ещё Джи..."},
+  {"bbox": [843, 40, 963, 100], "translated_text": "В итоге, и здесь тоже..."},
+  {"bbox": [712, 843, 963, 903], "translated_text": "Со стороны глубины..."},
+  {"bbox": [152, 887, 325, 966], "translated_text": "...было совершено ограбление..."},
+  {"bbox": [712, 40, 963, 100], "translated_text": "В итоге, и здесь тоже..."}
+]
+```
+===== КОНЕЦ =====
+2026-05-02 17:20:23,481 [WARNING] Блок вне области: [572, 571, 710, 653] -> (391,0,529,0)
+2026-05-02 17:20:23,483 [WARNING] Блок вне области: [712, 356, 915, 455] -> (531,0,734,0)
+2026-05-02 17:20:23,483 [WARNING] Блок вне области: [843, 40, 963, 100] -> (662,0,782,0)
+2026-05-02 17:20:23,485 [WARNING] Блок вне области: [712, 40, 963, 100] -> (531,0,782,0)
+2026-05-02 17:23:19,410 [INFO] === Manga Translator запущен ===
+2026-05-02 17:23:20,033 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:23:22,094 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:23:27,049 [DEBUG] Область: (183, 907, 1106, 1383)
+2026-05-02 17:23:27,203 [INFO] POST http://localhost:1234/v1/chat/completions модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic размер=923x476
+2026-05-02 17:23:27,209 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:24:07,762 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 1646
+2026-05-02 17:24:07,763 [INFO] ===== СЫРОЙ ОТВЕТ =====
+```json
+[
+  {"bbox": [575, 575, 741, 680], "translated_text": "Это был свет из здания?"},
+  {"bbox": [72, 923, 255, 994], "translated_text": "...и это было ограбление..."},
+  {"bbox": [713, 868, 960, 931], "translated_text": "Со стороны темноты!"},
+  {"bbox": [713, 775, 842, 825], "translated_text": ""},
+  {"bbox": [713, 416, 960, 467], "translated_text": "Черт, и это тоже..."},
+  {"bbox": [713, 45, 960, 108], "translated_text": "В итоге, здесь..."},
+  {"bbox": [713, 45, 960, 108], "translated_text": "...на моем глазу тоже..."},
+  {"bbox": [713, 416, 960, 467], "translated_text": "...только и происходит, что Дзидзи..."},
+  {"bbox": [713, 45, 960, 108], "translated_text": "...в глазу тоже..."},
+  {"bbox": [713, 45, 960, 108], "translated_text": "...на моем глазу..."}
+]
+```
+===== КОНЕЦ =====
+2026-05-02 17:24:07,763 [WARNING] Блок с некорректным bbox отброшен: [575, 575, 741, 680]
+2026-05-02 17:24:07,764 [WARNING] Блок с некорректным bbox отброшен: [72, 923, 255, 994]
+2026-05-02 17:24:07,764 [WARNING] Блок с некорректным bbox отброшен: [713, 868, 960, 931]
+2026-05-02 17:24:07,764 [WARNING] Блок с некорректным bbox отброшен: [713, 775, 842, 825]
+2026-05-02 17:27:34,357 [INFO] === Manga Translator запущен ===
+2026-05-02 17:27:34,975 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:27:37,033 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:27:48,165 [DEBUG] Область: (181, 918, 1109, 1383)
+2026-05-02 17:27:48,331 [INFO] POST http://localhost:1234/v1/chat/completions модель=qwen/qwen3.6-35b-a3b размер=928x465
+2026-05-02 17:27:48,336 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:32:48,832 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 6830
+2026-05-02 17:32:48,833 [INFO] ===== СЫРОЙ ОТВЕТ =====
+
+===== КОНЕЦ =====
+2026-05-02 17:32:48,833 [ERROR] JSON не найден, показываем текст как есть
+2026-05-02 17:36:49,413 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:36:51,454 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:36:59,742 [DEBUG] Область: (699, 924, 1111, 1368)
+2026-05-02 17:36:59,922 [INFO] POST http://localhost:1234/v1/chat/completions модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic размер=412x444
+2026-05-02 17:36:59,925 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:37:19,743 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 1113
+2026-05-02 17:37:19,744 [INFO] ===== СЫРОЙ ОТВЕТ =====
+```json
+[
+  {"bbox": [53, 36, 237, 138], "translated_text": "Что это за свет из здания?"},
+  {"bbox": [76, 149, 237, 230], "translated_text": "Свет..."},
+  {"bbox": [77, 775, 238, 934], "translated_text": "...было разграблено..."},
+  {"bbox": [761, 684, 965, 788], "translated_text": "Голос из глубины!"},
+  {"bbox": [720, 443, 788, 521], "translated_text": "!"}
+]
+```
+===== КОНЕЦ =====
+2026-05-02 17:41:05,826 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:41:07,864 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:41:17,210 [DEBUG] Область: (696, 923, 1112, 1376)
+2026-05-02 17:41:17,347 [INFO] POST http://localhost:1234/v1/chat/completions модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic размер=416x453
+2026-05-02 17:41:17,349 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:41:33,837 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 1060
+2026-05-02 17:41:33,838 [INFO] ===== СЫРОЙ ОТВЕТ =====
+```json
+[
+  {"bbox": [47, 42, 231, 180], "translated_text": "Что увидел Хикари внутри здания?"},
+  {"bbox": [769, 715, 935, 798], "translated_text": "Голос из глубины!"},
+  {"bbox": [84, 762, 210, 916], "translated_text": "...было почти разрушено..."},
+  {"bbox": [735, 456, 766, 503], "translated_text": "!"}
+]
+```
+===== КОНЕЦ =====
+2026-05-02 17:41:33,838 [WARNING] Нулевой bbox: [769, 715, 935, 798] -> (416,453,416,453)
+2026-05-02 17:41:33,838 [WARNING] Нулевой bbox: [84, 762, 210, 916] -> (84,453,210,453)
+2026-05-02 17:41:33,839 [WARNING] Нулевой bbox: [735, 456, 766, 503] -> (416,453,416,453)
+2026-05-02 17:41:33,839 [INFO] Распарсено 1 блоков
+2026-05-02 17:41:33,895 [DEBUG] Оверлей размером 416x453
+2026-05-02 17:41:33,896 [DEBUG] Рисуем блок 0: (47,42,231,180) текст: Что увидел Хикари внутри здани...
+2026-05-02 17:42:43,824 [DEBUG] Область: (204, 1204, 437, 1365)
+2026-05-02 17:42:43,937 [INFO] POST http://localhost:1234/v1/chat/completions модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic размер=233x161
+2026-05-02 17:42:43,938 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:42:52,835 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 823
+2026-05-02 17:42:52,836 [INFO] ===== СЫРОЙ ОТВЕТ =====
+```json
+[
+  {
+    "bbox": [57, 54, 978, 367],
+    "translated_text": "В итоге здесь тоже не было «пфф»... Азуса..."
+  }
+]
+```
+===== КОНЕЦ =====
+2026-05-02 17:42:52,836 [INFO] Распарсено 1 блоков
+2026-05-02 17:42:52,897 [DEBUG] Оверлей размером 233x161
+2026-05-02 17:42:52,897 [DEBUG] Рисуем блок 0: (57,54,233,161) текст: В итоге здесь тоже не было «пф...
+2026-05-02 17:43:07,472 [DEBUG] Область: (214, 1193, 639, 1380)
+2026-05-02 17:43:07,557 [INFO] POST http://localhost:1234/v1/chat/completions модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic размер=425x187
+2026-05-02 17:43:07,558 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:43:53,639 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 947
+2026-05-02 17:43:53,640 [INFO] ===== СЫРОЙ ОТВЕТ =====
+```json
+[
+  {
+    "bbox": [6, 39, 340, 965],
+    "translated_text": "Тьфу... Опять всё так же грязно!"
+  },
+  {
+    "bbox": [257, 12, 965, 168],
+    "translated_text": "В итоге, даже здесь нет этого «пфф»..."
+  }
+]
+```
+===== КОНЕЦ =====
+2026-05-02 17:43:53,640 [INFO] Распарсено 2 блоков
+2026-05-02 17:43:53,713 [DEBUG] Оверлей размером 425x187
+2026-05-02 17:43:53,714 [DEBUG] Рисуем блок 0: (6,39,340,187) текст: Тьфу... Опять всё так же грязн...
+2026-05-02 17:43:53,716 [DEBUG] Рисуем блок 1: (257,12,425,168) текст: В итоге, даже здесь нет этого ...
+2026-05-02 17:46:47,256 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:46:49,296 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:46:55,348 [DEBUG] Область: (198, 1188, 630, 1376)
+2026-05-02 17:46:55,474 [INFO] POST http://localhost:1234/v1/chat/completions модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic размер=432x188
+2026-05-02 17:46:55,476 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:47:08,623 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 918
+2026-05-02 17:47:08,624 [INFO] ===== СЫРОЙ ОТВЕТ =====
+```json
+[
+  {"bbox": [267, 50, 925, 200], "translated_text": "В конце концов, даже здесь этот «урод»..."},
+  {"bbox": [774, 773, 810, 915], "translated_text": "Тц... Что за мерзкий старик!"}
+]
+```
+===== КОНЕЦ =====
+2026-05-02 17:47:08,624 [INFO] Распарсено 1 блоков
+2026-05-02 17:49:33,619 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:49:35,654 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:50:27,223 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:50:29,274 [DEBUG] http://localhost:1234 "GET /v1/models HTTP/1.1" 200 416
+2026-05-02 17:50:34,905 [DEBUG] Область: (198, 1187, 642, 1380)
+2026-05-02 17:50:35,029 [INFO] POST http://localhost:1234/v1/chat/completions модель=gemma-4-26b-a4b-it-ultra-uncensored-heretic размер=444x193
+2026-05-02 17:50:35,031 [DEBUG] Starting new HTTP connection (1): localhost:1234
+2026-05-02 17:50:47,019 [DEBUG] http://localhost:1234 "POST /v1/chat/completions HTTP/1.1" 200 912
+2026-05-02 17:50:47,020 [INFO] ===== СЫРОЙ ОТВЕТ =====
+```json
+[
+  {"bbox": [256, 750, 846, 888], "translated_text": "Тьфу... повсюду одна грязь..."},
+  {"bbox": [263, 49, 913, 185], "translated_text": "В итоге, даже здесь нет «уродства»..."}
+]
+```
+===== КОНЕЦ =====
+2026-05-02 17:50:47,020 [INFO] Распарсено 1 блоков
