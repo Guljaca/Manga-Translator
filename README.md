@@ -1,6 +1,8 @@
 # Manga Translator
 Автоматический оффлайн перевод манги с японского на русский
 
+Тут можно обсудить: https://discord.gg/mCBAQ6mCE
+
 Тут можно скачать файлы моделей. 
 
 https://mega.nz/folder/nBlA1CBR#lFqzp3AGYv5vqIEeXu7Ccw
