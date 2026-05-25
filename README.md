@@ -28,3 +28,7 @@ translategemma-4b-it
 На CPU 23 секунды
 
 При ассиметричном запросе время экономится за счет параллельной обработки промтов.
+
+ПРИМЕР ПЕРЕВОДА
+
+[![FastPic.Ru](https://i127.fastpic.org/thumb/2026/0525/36/_fa31286d71f7e745dfa381cb113cd536.jpeg)](https://fastpic.org/view/127/2026/0525/_fa31286d71f7e745dfa381cb113cd536.jpg.html)
