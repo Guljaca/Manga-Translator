@@ -44,6 +44,8 @@ translategemma-4b-it
 
 ПРИМЕР ПЕРЕВОДА
 
-[![FastPic.Ru](https://i127.fastpic.org/thumb/2026/0525/36/_fa31286d71f7e745dfa381cb113cd536.jpeg)](https://fastpic.org/view/127/2026/0525/_fa31286d71f7e745dfa381cb113cd536.jpg.html)
+<img width="995" alt="Screenshot_11" src="https://github.com/user-attachments/assets/578ecf4c-630e-4390-b9c1-7291d4317cb0" />
+<img width="835" alt="Screenshot_12" src="https://github.com/user-attachments/assets/3978b9ee-9033-450a-8461-f53b0edbbf7b" />
 
-[![FastPic.Ru](https://i127.fastpic.org/thumb/2026/0525/fb/d1212aa1d36e5dc37ab4d0ae62c503fb.jpeg)](https://fastpic.org/view/127/2026/0525/d1212aa1d36e5dc37ab4d0ae62c503fb.jpg.html)
+
+
