@@ -8,25 +8,62 @@
   "AUTO_CHECK_INTERVAL": 2.0,
   "SOURCE_LANG": "Japanese",
   "TARGET_LANG": "Russian",
-  "MODE": "manga",
+  "MODE": "novel_v2",
   "MANGA_OCR_BACKEND": "manga_ocr",
-  "TEXT_OCR_BACKEND": "easyocr",
-  "OCR_LANG": "ja",
+  "MANGA_OCR_ENGINES": [
+    "windows_ocr"
+  ],
+  "MANGA_OCR_STRATEGY": "best_confidence",
+  "NOVEL_OCR_ENGINES": [
+    "windows_ocr"
+  ],
+  "NOVEL_OCR_STRATEGY": "best_confidence",
   "EASYOCR_CONFIDENCE": 0.1,
+  "TESSERACT_CONFIDENCE": 0.2,
+  "WINDOWS_OCR_CONFIDENCE": 0.2,
+  "MANGA_OCR_CONFIDENCE": 0.4,
+  "TESSERACT_PATH": "D:/Programs_translation/TesseractOCR550/tesseract.exe",
   "TEXT_BOX_WIDTH_FACTOR": 1.2,
   "TEXT_BOX_HEIGHT_FACTOR": 1.2,
   "ENABLE_OVERLAP_RELOCATION": true,
   "FONT_FAMILY": "Arial",
   "FONT_SIZE": 12,
-  "OCR_ENGINES": [
-    "easyocr"
-  ],
-  "OCR_STRATEGY": "best_confidence",
-  "TESSERACT_CONFIDENCE": 0.15,
-  "WINDOWS_OCR_CONFIDENCE": 0.2,
-  "TESSERACT_PATH": "D:/Programs_translation/TesseractOCR550/tesseract.exe",
+  "FONT_COLOR": "#ffffff",
+  "FONT_BOLD": true,
+  "FONT_OUTLINE": 2,
+  "BACKGROUND_COLOR": "#000000",
+  "BACKGROUND_OPACITY": 104,
+  "OUTLINE_COLOR": "#ff007f",
   "USE_GPU_OCR": true,
   "USE_GPU_MODEL": true,
   "ASYMMETRIC_TRANSLATION": true,
-  "MAX_CONCURRENT_REQUESTS": 2
+  "MAX_CONCURRENT_REQUESTS": 2,
+  "SCREENSHOT_SIMILARITY_THRESHOLD": 0.95,
+  "NOVEL_V2_OUTPUT_X": 1467,
+  "NOVEL_V2_OUTPUT_Y": 1109,
+  "NOVEL_V2_OUTPUT_W": 709,
+  "NOVEL_V2_OUTPUT_H": 182,
+  "STREAMING_OUTPUT": true,
+  "MODE1": "novel_v2",
+  "MODE2": "text",
+  "REGION1": [
+    1424,
+    847,
+    849,
+    189
+  ],
+  "REGION2": [
+    1875,
+    400,
+    552,
+    300
+  ],
+  "ENABLE_BINARIZATION": false,
+  "ENABLE_INVERSION": false,
+  "BINARIZATION_THRESHOLD": 127,
+  "BINARIZATION_BLOCK_SIZE": 0,
+  "BINARIZATION_C": 2.0,
+  "MANGA_OCR_LANG": "ja",
+  "TEXT_OCR_LANG": "ja",
+  "NOVEL_OCR_LANG": "ja"
 }
